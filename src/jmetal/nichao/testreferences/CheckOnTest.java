@@ -114,7 +114,7 @@ public class CheckOnTest {
 
                         evaluation = doValidation(currentTrain, currentTest, baseClassiferEnum, toDeletedFeature);
                         //因为再求解paretofront的时候，我们需要是目标最小化
-                        printWriter.println(new Double(train.numAttributes()-toDeletedFeature.length-1) + " " + (1-evaluation.weightedAreaUnderROC()));
+                        printWriter.println(new Double(train.numAttributes()-toDeletedFeature.length-1) + " " + evaluation.weightedAreaUnderROC());
                     }//while
 
                 } catch (Exception e) {
